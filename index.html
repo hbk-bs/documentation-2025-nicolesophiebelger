@@ -1,8 +1,45 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Portfolio - Windows 95 Theme</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="desktop">
+        <nav>
+            <div class="icon" data-project="teachable-machine">
+                <img src="./assets/icons/monitor.png" alt="Teachable Machine Icon">
+                <span>Teachable Machine</span>
+            </div>
+            <div class="icon" data-project="nature-of-code">
+                <img src="./assets/icons/folder.png" alt="Nature of Code Icon">
+                <span>Nature of Code</span>
+            </div>
+            <div class="icon" data-project="large-language-model">
+                <img src="./assets/icons/textfile.png" alt="Large Language Model Icon">
+                <span>Large Language Model</span>
+            </div>
+            <div class="icon" data-project="graphic-ai-novel">
+                <img src="./assets/icons/paint.png" alt="Graphic AI Novel Icon">
+                <span>Graphic AI Novel</span>
+            </div>
+        </nav>
+    </div>
+
+    <div class="taskbar">
+        <button class="start-btn">Start</button>
+        <div class="taskbar-items">
+            </div>
+        <div class="clock">
+            <span id="current-time"></span>
+        </div>
+    </div>
+
+    <div id="window-area"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>

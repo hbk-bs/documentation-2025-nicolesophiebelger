@@ -1,0 +1,161 @@
+/* --- Grundlegende Stile für Windows 95 Theme --- */
+:root {
+    --win95-gray-light: #C0C0C0;
+    --win95-gray-dark: #808080;
+    --win95-blue: #000080;
+    --win95-black: #000000;
+}
+
+body {
+    background-color: var(--win95-blue);
+    font-family: 'MS Sans Serif', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: url('./assets/cursors/cursor.cur'), auto;
+}
+
+nav {
+    display: contents; /* Wichtig, damit die Icons direkt in .desktop liegen */
+}
+
+/* Desktop und Icons */
+.desktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 0 var(--win95-black);
+    cursor: pointer;
+}
+
+.icon img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Taskleiste */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: var(--win95-gray-light);
+    border-top: 2px solid var(--win95-gray-light);
+    border-bottom: 2px solid var(--win95-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.start-btn {
+    font-weight: bold;
+    padding: 2px 8px;
+    border: 1px solid var(--win95-black);
+    background-color: var(--win95-gray-light);
+    box-shadow: 1px 1px 0 var(--win95-black), -1px -1px 0 var(--win95-gray-light);
+    cursor: pointer;
+}
+
+.clock {
+    color: var(--win95-black);
+    font-size: 14px;
+}
+
+/* Fenster-Layout */
+.window-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--win95-gray-light);
+    border: 2px solid var(--win95-gray-dark);
+    box-shadow: 2px 2px 0 var(--win95-black), -2px -2px 0 var(--win95-gray-light);
+    max-width: 800px;
+    width: 90%;
+    z-index: 10;
+}
+
+.window-header {
+    background-color: var(--win95-blue);
+    color: white;
+    padding: 2px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.window-controls button {
+    background: var(--win95-gray-light);
+    border: 2px solid var(--win95-black);
+    box-shadow: 1px 1px 0 var(--win95-gray-light), -1px -1px 0 var(--win95-black);
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.window-controls .close-btn::after {
+    content: 'x';
+    display: block;
+    transform: translateY(2px);
+}
+
+.window-content {
+    padding: 15px;
+    line-height: 1.6;
+}
+
+/* --- Responsive Anpassungen für Mobilgeräte --- */
+@media (max-width: 600px) {
+    body {
+        background-color: var(--win95-blue); /* Blauer Hintergrund für Handy-Ansicht */
+    }
+    
+    .desktop {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .icon {
+        flex-direction: row;
+        width: 100%;
+        text-align: left;
+        padding: 5px;
+        background-color: var(--win95-gray-light);
+        border: 2px solid var(--win95-gray-dark);
+        box-shadow: 2px 2px 0 var(--win95-black), -2px -2px 0 var(--win95-gray-light);
+        margin-bottom: 5px;
+    }
+
+    .icon img {
+        margin-right: 10px;
+    }
+
+    .taskbar {
+        height: 40px;
+    }
+
+    .window-container {
+        width: 95%;
+        top: 2.5%;
+        left: 2.5%;
+        transform: none;
+        position: fixed;
+        margin: 0;
+    }
+}
