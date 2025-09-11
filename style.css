@@ -241,4 +241,28 @@ nav {
         position: fixed;
         margin: 0;
     }
+
+    /* Styling für die Screenshots */
+.project-screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Abstand zwischen den Bildern */
+    margin-top: 20px;
+}
+
+.project-screenshots img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--win95-black);
+    box-shadow: 2px 2px 0 var(--win95-black);
+    display: block;
+}
+
+/* Anpassung für kleinere Bildschirme */
+@media (max-width: 600px) {
+    .project-screenshots {
+        flex-direction: column; /* Bilder untereinander statt nebeneinander */
+    }
+}
+
 }
