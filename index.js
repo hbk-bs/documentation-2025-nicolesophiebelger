@@ -10,12 +10,12 @@ const projects = {
     'teachable-machine': {
         title: 'Teachable Machine',
         content: `
-            <h3>Projekt: Teachable Machine</h3>
-            <p>Hier beschreibe ich mein Projekt Teachable Machine und zeige Bilder oder Links dazu.</p>
+            <h3>Projekt: Teachable Machine: Welche Clubmate bist du?</h3>
+            <p>Bei diesem Projekt war es Aufgabe eine KI zu trainieren. Ich habe mich dabei für ein spielerischen Gag entschieden, der dir anhand deines Outfits und Aussehens sagt, welche der vorgegeben Clubmate-Geschmackssorten man wäre.</p>
             <p>Das ist ein Beispielinhalt.</p>
             <a href="https://hbk-bs.github.io/teachable-machine-nicolesophiebelger/" target="_blank">zum Projekt</a>
             <br><br>
-            <img src="./assets/project-images/teachable-machine-screenshot.jpg" alt="Screenshot Teachable Machine">
+            <img src="https://github.com/hbk-bs/documentation-2025-nicolesophiebelger/assets/images/icons/1.png" alt="Screenshot Teachable Machine">
         `
     },
     'nature-of-code': {
