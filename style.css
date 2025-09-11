@@ -7,10 +7,11 @@
 }
 
 body {
-    background-color: var(--win95-blue);
+    background-color: var(--win95-blue); /* Klassischer blauer Hintergrund */
     font-family: 'MS Sans Serif', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    /* Setze hier den Pfad zu deinem .cur Mauszeiger */
     cursor: url('./assets/cursors/cursor.cur'), auto;
 }
 
@@ -34,7 +35,7 @@ nav {
     text-align: center;
     color: white;
     text-shadow: 1px 1px 0 var(--win95-black);
-    cursor: pointer;
+    cursor: pointer; /* Zeigt an, dass es klickbar ist */
 }
 
 .icon img {
@@ -72,18 +73,18 @@ nav {
     font-size: 14px;
 }
 
-/* Fenster-Layout */
+/* Fenster-Layout (selbst gestylt, nicht über 98.css) */
 .window-container {
-    position: absolute;
+    position: absolute; /* Absolute Positionierung für Drag & Drop */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Zentrieren */
     background-color: var(--win95-gray-light);
     border: 2px solid var(--win95-gray-dark);
     box-shadow: 2px 2px 0 var(--win95-black), -2px -2px 0 var(--win95-gray-light);
     max-width: 800px;
     width: 90%;
-    z-index: 10;
+    z-index: 10; /* Stellt sicher, dass Fenster über anderen Elementen liegen */
 }
 
 .window-header {
@@ -94,6 +95,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
+    cursor: move; /* Zeigt an, dass man das Fenster ziehen kann */
 }
 
 .window-controls button {
@@ -104,14 +106,15 @@ nav {
     width: 18px;
     height: 18px;
     font-size: 12px;
-    line-height: 0;
+    line-height: 0; /* Zentriert das 'x' */
     cursor: pointer;
 }
 
+/* ::after wird für das 'x' Zeichen verwendet */
 .window-controls .close-btn::after {
     content: 'x';
     display: block;
-    transform: translateY(2px);
+    transform: translateY(2px); /* Leichte Anpassung, damit das 'x' besser aussieht */
 }
 
 .window-content {
@@ -124,7 +127,7 @@ nav {
     body {
         background-color: var(--win95-blue); /* Blauer Hintergrund für Handy-Ansicht */
     }
-    
+
     .desktop {
         flex-direction: column;
         align-items: flex-start;
@@ -132,7 +135,7 @@ nav {
     }
 
     .icon {
-        flex-direction: row;
+        flex-direction: row; /* Icons nebeneinander auf Handy */
         width: 100%;
         text-align: left;
         padding: 5px;
@@ -154,8 +157,8 @@ nav {
         width: 95%;
         top: 2.5%;
         left: 2.5%;
-        transform: none;
-        position: fixed;
+        transform: none; /* Transform aufheben für feste Position */
+        position: fixed; /* Fenster fest am oberen Rand positionieren */
         margin: 0;
     }
 }
