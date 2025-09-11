@@ -11,7 +11,7 @@ const projects = {
         title: 'Teachable Machine',
         content: `
             <h3>Projekt: Teachable Machine: Welche Clubmate bist du?</h3>
-            <p>Bei diesem Projekt war es Aufgabe eine KI zu trainieren. Ich habe mich dabei für ein spielerischen Gag entschieden, der dir anhand deines Outfits und Aussehens sagt, welche der vorgegeben Clubmate-Geschmackssorten man wäre.</p>
+            <p>Bei diesem Projekt war es Aufgabe eine KI zu trainieren. Ich habe mich dabei für einein spielerischen Gag entschieden, der dir anhand deines Outfits und Aussehens sagt, welche der vorgegeben Clubmate-Geschmackssorten man wäre.</p>
             <p>Das ist ein Beispielinhalt.</p>
             <a href="https://hbk-bs.github.io/teachable-machine-nicolesophiebelger/" target="_blank">zum Projekt</a>
             <br><br>
@@ -109,7 +109,7 @@ function createWindow(projectName) {
         windowDiv.remove();
     });
 
-    // Drag & Drop Funktionalität
+    // Drag & Drop Funktionalität für Fenster
     const header = windowDiv.querySelector('.window-header');
     let isDragging = false;
     let offsetX, offsetY;

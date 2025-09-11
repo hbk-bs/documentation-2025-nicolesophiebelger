@@ -192,6 +192,8 @@ nav {
 .window-content {
     padding: 15px;
     line-height: 1.6;
+    max-height: 400px; /* Begrenzt die Höhe des Inhaltsbereichs */
+    overflow-y: auto;  /* Fügt eine Scrollbar hinzu */
 }
 
 /* --- Responsive Anpassungen für Mobilgeräte --- */
@@ -201,29 +203,30 @@ nav {
     }
 
     .header-title {
-        font-size: 16px; /* Schriftgröße für Handy verkleinern */
+        font-size: 16px; 
         right: 10px;
     }
     
     .desktop {
-        flex-direction: column;
+        flex-direction: row; /* Icons bleiben in einer Reihe */
         align-items: flex-start;
         padding: 10px;
     }
 
     .icon {
-        flex-direction: row;
-        width: 100%;
-        text-align: left;
-        padding: 5px;
-        background-color: var(--win95-gray-light);
-        border: 2px solid var(--win95-gray-dark);
-        box-shadow: 2px 2px 0 var(--win95-black), -2px -2px 0 var(--win95-gray-light);
-        margin-bottom: 5px;
+        /* Icons sollen keine Balken mehr sein */
+        flex-direction: column;
+        width: 80px;
+        text-align: center;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+        border: none;
+        margin: 0 5px 5px 0;
     }
 
     .icon img {
-        margin-right: 10px;
+        margin-right: 0;
     }
 
     .taskbar {
