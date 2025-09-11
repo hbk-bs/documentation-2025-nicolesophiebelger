@@ -43,7 +43,7 @@ nav {
     height: 32px;
 }
 
-/* Taskleiste */
+/* Start-Menü und Taskleiste (NEU) */
 .taskbar {
     position: fixed;
     bottom: 0;
@@ -57,15 +57,73 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 5px;
+    box-sizing: border-box;
 }
 
 .start-btn {
     font-weight: bold;
+    font-size: 14px;
     padding: 2px 8px;
     border: 1px solid var(--win95-black);
     background-color: var(--win95-gray-light);
     box-shadow: 1px 1px 0 var(--win95-black), -1px -1px 0 var(--win95-gray-light);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.start-btn:active {
+    box-shadow: inset 1px 1px 0 var(--win95-black), inset -1px -1px 0 var(--win95-gray-light);
+}
+
+.win-logo {
+    height: 18px;
+    margin-right: 5px;
+}
+
+#start-menu {
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    background-color: var(--win95-gray-light);
+    border: 2px solid var(--win95-black);
+    box-shadow: 2px 2px 0 var(--win95-black), -2px -2px 0 var(--win95-gray-light);
+    width: 200px;
+    padding: 5px;
+    box-sizing: border-box;
+    z-index: 20;
+}
+
+#start-menu hr {
+    border: none;
+    border-top: 1px solid var(--win95-black);
+    border-bottom: 1px solid var(--win95-gray-light);
+    margin: 5px 0;
+}
+
+.menu-item, .menu-item-profile {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.menu-item img, .menu-item-profile img {
+    height: 16px;
+    margin-right: 10px;
+}
+
+.menu-item-profile {
+    font-weight: bold;
+}
+
+.menu-item:hover {
+    background-color: var(--win95-blue);
+    color: white;
+}
+
+.hidden {
+    display: none;
 }
 
 .clock {
@@ -73,7 +131,7 @@ nav {
     font-size: 14px;
 }
 
-/* Fenster-Layout (selbst gestylt, nicht über 98.css) */
+/* Fenster-Layout */
 .window-container {
     position: absolute; /* Absolute Positionierung für Drag & Drop */
     top: 50%;
@@ -110,7 +168,6 @@ nav {
     cursor: pointer;
 }
 
-/* ::after wird für das 'x' Zeichen verwendet */
 .window-controls .close-btn::after {
     content: 'x';
     display: block;

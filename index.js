@@ -15,7 +15,6 @@ const projects = {
             <p>Das ist ein Beispielinhalt.</p>
             <a href="https://hbk-bs.github.io/teachable-machine-nicolesophiebelger/" target="_blank">zum Projekt</a>
             <br><br>
-            <img src="https://github.com/hbk-bs/documentation-2025-nicolesophiebelger/assets/images/icons/1.png" alt="Screenshot Teachable Machine">
         `
     },
     'nature-of-code': {
@@ -24,9 +23,8 @@ const projects = {
             <h3>Projekt: Nature of Code</h3>
             <p>Beschreibung des Nature of Code Projekts.</p>
             <p>Hier können Links zu Code-Beispielen oder GIFs stehen.</p>
-            <a href="https://hbk-bs.github.io/nature-of-code-nicolesophiebelger/" target="_blank">zum Projekt</a>
+            <a href="https://hbk-bs.io/nature-of-code-nicolesophiebelger/" target="_blank">zum Projekt</a>
             <br><br>
-            <img src="./assets/project-images/nature-of-code-screenshot.jpg" alt="Screenshot Nature of Code">
         `
     },
     'large-language-model': {
@@ -37,7 +35,6 @@ const projects = {
             <p>Ich erkläre, was ich gemacht habe und was die Ergebnisse sind.</p>
             <a href="https://hbk-bs.github.io/text-the-universal-interface-nicolesophiebelger/" target="_blank">zum Projekt</a>
             <br><br>
-            <img src="./assets/project-images/llm-screenshot.jpg" alt="Screenshot Large Language Model">
         `
     },
     'graphic-ai-novel': {
@@ -48,7 +45,15 @@ const projects = {
             <p>Hier präsentiere ich die visuelle Arbeit und den kreativen Prozess.</p>
             <a href="https://hbk-bs.github.io/a-generative-graphic-novel-finima/" target="_blank">zum Projekt</a>
             <br><br>
-            <img src="./assets/project-images/ai-novel-screenshot.jpg" alt="Screenshot Graphic AI Novel">
+        `
+    },
+    'general-reflection': {
+        title: 'General Reflection',
+        content: `
+            <h3>General Reflection</h3>
+            <p>Wie die zwei Semester des Grundkurses "Digitale Kommunikation" liefen und was ich dabei lernte.</p>
+            <p>Vor einem Jahr hätte ich niemals gedacht, dass ich sagen kann, dass ich einen eigenen Flirt Simulator RPG coden oder eine KI trainieren kann. Durch die vergangenen zwei Semester habe ich eine Menge über das Programmieren gelernt. Wir haben nicht nur an digitalen Projekten gearbeitet und unter anderem mit KI gewerkelt, sondern auch physische und analoge Objekte mit Technik und Elektrik zum Leben erweckt. Ich kann definitiv mit erhobenem Blick zurücksehen und sagen, dass es am Ende sehr Spaß gemacht hat.
+            Natürlich war es etwas frustrierend, wenn mal etwas nicht geklappt hat, aber man geht ja bekanntlich durch jedes Abenteuer mit Höhen und Tiefen. Ich möchte mich vor allem bei Fabian Morón Diaz für seine Geduld und Aufopferung bedanken. Durch seine Ambition und Motivation fürs Coden hat er uns ein Stück seiner Passion viel näher gebracht. Ich könnte jetzt eine Liste nennen der Dinge die ich gelernt habe, aber das lässt sich auch einfach anhand der Dinge demonstrieren, die ich in den 2 Semestern erschuf und die persönliche Entwicklung der Projekte.</p>
         `
     }
 };
@@ -63,18 +68,25 @@ document.querySelectorAll('.icon').forEach(icon => {
     });
 });
 
+// Start-Menü Logik
+const startButton = document.querySelector('.start-btn');
+const startMenu = document.getElementById('start-menu');
+
+startButton.addEventListener('click', () => {
+    startMenu.classList.toggle('hidden');
+});
+
 // Funktion zum Erstellen eines Fensters
 function createWindow(projectName) {
     const projectData = projects[projectName];
     const windowArea = document.getElementById('window-area');
 
-    // Überprüfen, ob das Fenster bereits offen ist
     if (document.getElementById(`window-${projectName}`)) {
-        return; // Fenster ist schon offen, nichts tun
+        return;
     }
 
     const windowDiv = document.createElement('div');
-    windowDiv.className = 'window-container'; // Nutzt unsere eigenen Klassen
+    windowDiv.className = 'window-container';
     windowDiv.id = `window-${projectName}`;
     windowDiv.innerHTML = `
         <div class="window-header">
@@ -92,34 +104,33 @@ function createWindow(projectName) {
 
     windowArea.appendChild(windowDiv);
 
-    // Schließen-Funktionalität hinzufügen
+    // Schließen-Funktionalität
     windowDiv.querySelector('.close-btn').addEventListener('click', () => {
         windowDiv.remove();
     });
 
-    // Drag & Drop Funktionalität (einfache Implementierung)
+    // Drag & Drop Funktionalität
+    const header = windowDiv.querySelector('.window-header');
     let isDragging = false;
     let offsetX, offsetY;
 
-    const header = windowDiv.querySelector('.window-header');
     header.addEventListener('mousedown', (e) => {
         isDragging = true;
         offsetX = e.clientX - windowDiv.getBoundingClientRect().left;
         offsetY = e.clientY - windowDiv.getBoundingClientRect().top;
-        windowDiv.style.cursor = 'move'; // Mauszeiger auf 'move' ändern
+        windowDiv.style.cursor = 'move';
     });
 
     document.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         windowDiv.style.left = (e.clientX - offsetX) + 'px';
         windowDiv.style.top = (e.clientY - offsetY) + 'px';
-        // Verhindern, dass das Fenster aus dem Sichtbereich verschwindet (optional)
-        windowDiv.style.transform = 'translate(0, 0)'; // Transform zurücksetzen für absolute Positionierung
+        windowDiv.style.transform = 'translate(0, 0)';
     });
 
     document.addEventListener('mouseup', () => {
         isDragging = false;
-        windowDiv.style.cursor = 'default'; // Mauszeiger zurücksetzen
+        windowDiv.style.cursor = 'default';
     });
 }
 
