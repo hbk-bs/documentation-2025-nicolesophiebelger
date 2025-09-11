@@ -16,8 +16,8 @@ const projects = {
             <a href="https://github.com/hbk-bs/teachable-machine-nicolesophiebelger" target="_blank">Github Repository</a>
             <br>
             <div class="project-screenshots">
-                <img src="\project images\Welche Clubmate bist du.png" alt="Screenshot 1">
-                <img src="assets/images/screenshots/teachable-machine-2.png" alt="Screenshot 2">
+                <img src="assets/images/project images/Welche Clubmate bist du.png" alt="Screenshot 1">
+                <img src="assets/images/project images/ICE TEA!.png" alt="Screenshot 2">
             </div>
             <br>
         `
@@ -31,6 +31,11 @@ const projects = {
             Während der Bearbeitung traf ich auf viele Momente in denen ich nicht wusste wie ich meine Visionen umsetzen kann. Dabei hat mir vorallem Gemini geholfen und mich unterstützt, sowie die vorgegeben Wegweiser meines Dozenten. Die wichtigste Erkenntnis, die ich aus diesem Projekt mitgenommen habe, ist die Wichtigkeit eines soliden Grundverständnis der physikalischen und mathematischen Prinzipien. Letztendlich zeigte mir das Projekt die Kraft, Beobachtung, grundlegendes Wissen und kollaborative Werkzeuge zu kombinieren, um ein komplexes kreatives Ergebnis zu erzielen, selbst wenn man vor Herausforderungen steht, die man nicht vollständig allein lösen kann.</p>
             <a href="https://github.com/hbk-bs/nature-of-code-nicolesophiebelger" target="_blank">Github Repository</a>
             <br><br>
+            <div class="project-screenshots">
+                <img src="assets/images/project images/Screenshot 2025-09-11 193323.png" alt="Screenshot 1">
+                
+            </div>
+            <br<
         `
     },
     'large-language-model': {
@@ -41,6 +46,11 @@ const projects = {
             <p>Das Projekt war ziemlich frei und grenzenlos. Einzige Vorgabe war, keinen weiteren ChatBot zu kreieren. Ich habe mich daher (wie auch andere Kommilitonen) an das Storytelling gewagt. Allerdings mit einem kleinen Twist. Ich habe ein Fable für RPG's und kombiniere gerne Leidenschaften mit meiner Arbeit. Daher kam ich zu dem Entschluss ein Storytelling-Spielsimulator im Retrostil zu programmieren. Um es noch ein wenig spannender zu machen, entschied ich mich für das Setting eines ersten Dates. Das soll die Geschichte alltagstauglicher, nachvollziehbarer und gleichzeitig ungewöhnlicher machen.</p>
             <a href="https://github.com/hbk-bs/text-the-universal-interface-nicolesophiebelger" target="_blank">Github Repository</a>
             <br><br>
+            <div class="project-screenshots">
+                <img src="assets/images/project images/First Date.png" alt="Screenshot 1">
+                <img src="assets/images/project images/How it works.png" alt="Screenshot 2">
+            </div>
+            <br>
         `
     },
     'graphic-ai-novel': {
@@ -53,6 +63,10 @@ const projects = {
             Selbstverständlich sind wir bei der Bildgenerierung auf Schwierigkeiten gestoßen, da die KI nicht wirklich immer verstanden hat was wir genau brauchen. Oft sahen Bilder daher nicht durchgängig gleich aus oder konnten so durchgesetzt werden wie in unseren Visionen, aber letztendlich hat es dennoch unserer Meinung nach gut funktioniert. Gleichzeitig hat es mich auch ein wenig gefreut, dass die Technik trotz der Innovationen doch noch viele Dinge missversteht, welche ein Designer oder Künstler vermutlich besser machen würde. Dadurch habe ich das Gefühl, dass am Ende die KI den Designer oder Künstler vielleicht doch nicht so gut ersetzen kann wie man immer sagt.</p>
             <a href="https://github.com/hbk-bs/a-generative-graphic-novel-finima" target="_blank">Github Repository</a>
             <br><br>
+            <div class="project-screenshots">
+                <img src="assets/images/project images/LION.png">
+            </div>
+            <br>
         `
     },
     'general-reflection': {
