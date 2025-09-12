@@ -98,7 +98,8 @@ Insgesamt fand ich die Projekte persönlich viel ansprechender und faszinierende
 
 <br>
 Insgesamt fand ich die Projekte persönlich viel ansprechender und faszinierender und genoss die Arbeit daran sehr. Selbstverständlich waren sie anspruchsvoller, doch durch die Möglichkeit der Nutzung von Künstlicher Intelligenz als Unterstützung, hatte ich das Gefühl, dass ich dadurch mit dem Ergebnis der Projekte zufriedener war und mich nicht so begrenzt gefühlt.</p>
-        `
+  <a href="https://github.com/hbk-bs/a-generative-graphic-novel-finima" target="_blank">Github Repository</a>
+            <br><br>      `
     }
 
 
