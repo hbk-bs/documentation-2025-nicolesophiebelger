@@ -1,7 +1,6 @@
-/* Schriftart einbinden */
+
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* --- Grundlegende Stile für Windows 95 Theme --- */
 :root {
     --win95-gray-light: #C0C0C0;
     --win95-gray-dark: #808080;
@@ -17,7 +16,7 @@ body {
     cursor: url('./assets/cursors/cursor.cur'), auto;
 }
 
-/* Neue Überschrift */
+
 .header-title {
     position: fixed;
     bottom: 40px; 
@@ -33,7 +32,7 @@ nav {
     display: contents;
 }
 
-/* Desktop und Icons */
+
 .desktop {
     display: flex;
     flex-wrap: wrap;
@@ -57,7 +56,7 @@ nav {
     height: 32px;
 }
 
-/* Taskleiste */
+
 .taskbar {
     position: fixed;
     bottom: 0;
@@ -95,7 +94,7 @@ nav {
     margin-right: 5px;
 }
 
-/* Start-Menü */
+
 #start-menu {
     position: fixed;
     bottom: 30px;
@@ -196,7 +195,6 @@ nav {
     overflow-y: auto;
 }
 
-/* Styling für die Screenshots */
 .project-screenshots {
     display: flex;
     flex-wrap: wrap; 
@@ -213,7 +211,6 @@ nav {
     display: block;
 }
 
-/* --- Responsive Anpassungen für Mobilgeräte --- */
 @media (max-width: 600px) {
     body {
         background-color: var(--win95-blue);

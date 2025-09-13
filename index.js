@@ -1,11 +1,11 @@
-// Funktion zur Aktualisierung der Uhrzeit
+
 function updateClock() {
     const now = new Date();
     const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     document.getElementById('current-time').textContent = timeString;
 }
 
-// Projekte-Daten: Hier fügst du die Links und Inhalte ein
+
 const projects = {
     'teachable-machine': {
         title: 'Teachable Machine',
@@ -108,7 +108,7 @@ Am Ende gab es in der Debatte keinen klaren Gewinner, was wirklich zeigt, wie ko
 
 };
 
-// Event-Listener für das Öffnen der Fenster
+
 document.querySelectorAll('.icon').forEach(icon => {
     icon.addEventListener('click', () => {
         const projectName = icon.dataset.project;
@@ -118,7 +118,7 @@ document.querySelectorAll('.icon').forEach(icon => {
     });
 });
 
-// Start-Menü Logik
+
 const startButton = document.querySelector('.start-btn');
 const startMenu = document.getElementById('start-menu');
 
@@ -154,12 +154,12 @@ function createWindow(projectName) {
 
     windowArea.appendChild(windowDiv);
 
-    // Schließen-Funktionalität
+    
     windowDiv.querySelector('.close-btn').addEventListener('click', () => {
         windowDiv.remove();
     });
 
-    // Drag & Drop Funktionalität für Fenster
+
     const header = windowDiv.querySelector('.window-header');
     let isDragging = false;
     let offsetX, offsetY;
@@ -184,7 +184,7 @@ function createWindow(projectName) {
     });
 }
 
-// Uhrzeit beim Laden der Seite initialisieren
+
 updateClock();
-// Uhrzeit alle 60 Sekunden aktualisieren
+
 setInterval(updateClock, 60000);
