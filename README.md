@@ -17,7 +17,7 @@ Das Portfolio dokumentiert die folgenden Projekte:
 
 * **Teachable Machine**: Ein spielerischer KI-Test basierend auf Webcam(Bild)erkennung.
 * **Nature of Code**: Ein Bewegtbildprojekt, inspiriert von Naturphänomenen.
-* **Large Language Model**: Ein Storytelling-Spielsimulator, entwickelt mit einem Large Language Model.
+* **Text The Universal Interface**: Ein Storytelling-Spielsimulator, entwickelt mittels Valtown und API und LLM (Large Language Model)
 * **Graphic AI Novel**: Ein digitales Bilderbuch, dessen Grafiken mit einem KI-Bildgenerator erstellt wurden.
 * **General Reflection**: Eine Reflexion über die Lernerfahrungen im Kurs "Digitale Kommunikation".
 
