@@ -42,7 +42,7 @@ const projects = {
         title: 'TTUI',
         content: `
             <h3>Projekt: Text The Universal Interface</h3>
-            <p>Hier stand im Vordergrund die Arbeit mit künstlicher Intelligenz, Valtown, API's (Schnittstellen) und LLMs (LargeLanguageModels). Hauptpunkt war also eine API, die auf Kommando etwas generiert.</p>
+            <p>Unsere Aufgabe bestand darin, eine textbasierte Applikation/Spiel usw. zu programmieren. Diese soll danach reagieren und handeln, was auf den vorgegebenen Input eines Nutzers an ein Large Language Model basiert und was es daraus interpretiert. Es stand die Arbeit mit künstlicher Intelligenz, Valtown, API's (Schnittstellen) und LLMs (LargeLanguageModels) als Hauptakteure. Im Vordergrund war also eine API, die auf Kommando angegebenen Input generiert.</p>
             <p>Das Projekt war ziemlich frei und grenzenlos. Einzige Vorgabe war, keinen weiteren ChatBot zu kreieren. Ich habe mich daher (wie auch andere Kommilitonen) an das Storytelling gewagt. Allerdings mit einem kleinen Twist. Ich habe ein Fable für RPG's und kombiniere gerne Leidenschaften mit meiner Arbeit. Daher kam ich zu dem Entschluss ein Storytelling-Spielsimulator im Retrostil zu programmieren. Um es noch ein wenig spannender zu machen, entschied ich mich für das Setting eines ersten Dates. Das soll die Geschichte alltagstauglicher, nachvollziehbarer und gleichzeitig ungewöhnlicher machen.</p>
             <a href="https://github.com/hbk-bs/text-the-universal-interface-nicolesophiebelger" target="_blank">Github Repository</a>
             <br><br>
